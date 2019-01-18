@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
@@ -13,7 +14,6 @@ import { PageNotFoundComponent } from './page-not-found.component';
 
 // Feature Modules
 import { MessageModule } from './messages/message.module';
-import { ProductModule } from './products/product.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
@@ -24,9 +24,9 @@ import { UserModule } from './user/user.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
-    ProductModule,
     UserModule,
     MessageModule,
     AppRoutingModule
